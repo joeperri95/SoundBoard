@@ -146,4 +146,6 @@ Wire Wire Line
 Wire Wire Line
 	2900 1050 3200 1050
 Connection ~ 2900 1050
+Text HLabel 3500 2100 2    50   Input ~ 0
+AUDIO_FROM_DAC
 $EndSCHEMATC
