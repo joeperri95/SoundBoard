@@ -191,9 +191,9 @@ V1
 Wire Wire Line
 	6300 4400 6350 4400
 Connection ~ 6350 4400
-Text HLabel 3500 4100 2    50   Input ~ 0
+Text HLabel 3900 4100 2    50   Input ~ 0
 FUEL_SDA
-Text HLabel 3500 4000 2    50   Input ~ 0
+Text HLabel 3900 4000 2    50   Input ~ 0
 FUEL_SCL
 Text HLabel 3500 6000 2    50   Input ~ 0
 V1_EN
@@ -963,4 +963,48 @@ Wire Wire Line
 	1700 1800 1400 1800
 Connection ~ 1400 1800
 NoConn ~ 6600 6600
+$Comp
+L Device:R R13
+U 1 1 5E38C0E0
+P 3800 3850
+F 0 "R13" H 3870 3896 50  0000 L CNN
+F 1 "10K" H 3870 3805 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 3730 3850 50  0001 C CNN
+F 3 "~" H 3800 3850 50  0001 C CNN
+	1    3800 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R9
+U 1 1 5E38C824
+P 3700 4250
+F 0 "R9" H 3770 4296 50  0000 L CNN
+F 1 "10K" H 3770 4205 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 3630 4250 50  0001 C CNN
+F 3 "~" H 3700 4250 50  0001 C CNN
+	1    3700 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 4100 3700 4100
+Wire Wire Line
+	3900 4100 3700 4100
+Connection ~ 3700 4100
+Wire Wire Line
+	3500 4000 3800 4000
+Wire Wire Line
+	3800 4000 3900 4000
+Connection ~ 3800 4000
+Text HLabel 3850 3600 2    50   Input ~ 0
+VDD
+Wire Wire Line
+	3850 3600 3800 3600
+Wire Wire Line
+	3800 3600 3800 3700
+Text HLabel 3800 4450 2    50   Input ~ 0
+VDD
+Wire Wire Line
+	3800 4450 3700 4450
+Wire Wire Line
+	3700 4450 3700 4400
 $EndSCHEMATC
