@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:SoundBoard-cache
-EELAYER 26 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -34,7 +33,7 @@ U 1 1 5E292C02
 P 4600 2250
 F 0 "LS1" H 4770 2246 50  0000 L CNN
 F 1 "Speaker" H 4770 2155 50  0000 L CNN
-F 2 "" H 4600 2050 50  0001 C CNN
+F 2 "Soundboard:speaker_pads" H 4600 2050 50  0001 C CNN
 F 3 "~" H 4590 2200 50  0001 C CNN
 	1    4600 2250
 	1    0    0    -1  

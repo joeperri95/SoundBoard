@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name Soundboard)(type KiCad)(uri ${KIPRJMOD}/Soundboard.pretty)(options "")(descr ""))
+)

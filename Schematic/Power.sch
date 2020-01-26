@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:SoundBoard-cache
-EELAYER 26 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -23,7 +22,7 @@ AR Path="/5E27AF1B/5E27C06B" Ref="U?"  Part="1"
 AR Path="/5E27BE41/5E27C06B" Ref="U6"  Part="1" 
 F 0 "U6" H 5700 4665 50  0000 C CNN
 F 1 "STC3100IST" H 5700 4574 50  0000 C CNN
-F 2 "" H 5700 4450 50  0001 C CNN
+F 2 "Package_SO:MSOP-8_3x3mm_P0.65mm" H 5700 4450 50  0001 C CNN
 F 3 "" H 5700 4450 50  0001 C CNN
 	1    5700 4450
 	-1   0    0    1   
@@ -57,17 +56,6 @@ F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/MIC550X.pdf" H 5600 2350 50
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Battery_Cell BT1
-U 1 1 5E27C1DA
-P 4050 4250
-F 0 "BT1" H 4168 4346 50  0000 L CNN
-F 1 "Battery_Cell" H 4168 4255 50  0000 L CNN
-F 2 "" V 4050 4310 50  0001 C CNN
-F 3 "~" V 4050 4310 50  0001 C CNN
-	1    4050 4250
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR0101
 U 1 1 5E27C27E
 P 4050 4800
@@ -80,17 +68,6 @@ F 3 "" H 4050 4800 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4050 4400 4050 4350
-$Comp
-L Device:D D8
-U 1 1 5E27C7ED
-P 4050 2800
-F 0 "D8" V 4004 2879 50  0000 L CNN
-F 1 "D" V 4095 2879 50  0000 L CNN
-F 2 "Diode_SMD:D_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 4050 2800 50  0001 C CNN
-F 3 "~" H 4050 2800 50  0001 C CNN
-	1    4050 2800
-	0    1    1    0   
-$EndComp
 $Comp
 L power:GND #PWR0102
 U 1 1 5E27C911
@@ -251,7 +228,7 @@ U 1 1 5E27C413
 P 2450 2400
 F 0 "J3" H 2505 2867 50  0000 C CNN
 F 1 "USB_B_Micro" H 2505 2776 50  0000 C CNN
-F 2 "" H 2600 2350 50  0001 C CNN
+F 2 "Connector_USB:USB_Micro-B_Amphenol_10103594-0001LF_Horizontal" H 2600 2350 50  0001 C CNN
 F 3 "~" H 2600 2350 50  0001 C CNN
 	1    2450 2400
 	1    0    0    -1  
@@ -348,7 +325,6 @@ F 3 "~" H 4050 4550 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4050 4700 4050 4800
-Connection ~ 4050 4350
 Connection ~ 4050 4000
 Wire Wire Line
 	4050 4000 4050 3700
@@ -409,17 +385,6 @@ Connection ~ 4050 3700
 Wire Wire Line
 	4050 3700 4050 2950
 NoConn ~ 6200 4300
-$Comp
-L Device:D D6
-U 1 1 5E28FE3D
-P 3550 2450
-F 0 "D6" V 3596 2371 50  0000 R CNN
-F 1 "D" V 3505 2371 50  0000 R CNN
-F 2 "Diode_SMD:D_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 3550 2450 50  0001 C CNN
-F 3 "~" H 3550 2450 50  0001 C CNN
-	1    3550 2450
-	0    -1   -1   0   
-$EndComp
 Text HLabel 6200 4100 2    50   Input ~ 0
 FUEL_SDA
 Text HLabel 6200 4000 2    50   Input ~ 0
@@ -431,17 +396,6 @@ USB_N
 Connection ~ 2450 2800
 Wire Wire Line
 	2750 2200 3150 2200
-$Comp
-L Device:D D7
-U 1 1 5E27C710
-P 3900 2200
-F 0 "D7" H 3900 1984 50  0000 C CNN
-F 1 "D" H 3900 2075 50  0000 C CNN
-F 2 "Diode_SMD:D_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 3900 2200 50  0001 C CNN
-F 3 "~" H 3900 2200 50  0001 C CNN
-	1    3900 2200
-	-1   0    0    1   
-$EndComp
 $Comp
 L Device:C C19
 U 1 1 5E2B75E3
@@ -465,9 +419,6 @@ Wire Wire Line
 Wire Wire Line
 	3150 2200 3550 2200
 Connection ~ 3550 2200
-Wire Wire Line
-	4050 2200 4050 2650
-Connection ~ 4050 2200
 Wire Wire Line
 	2700 3150 2700 3500
 Connection ~ 2700 3500
@@ -506,22 +457,9 @@ Text Label 5050 3000 2    50   ~ 0
 VRAW
 Text Label 4850 2000 2    50   ~ 0
 VRAW
-$Comp
-L power:PWR_FLAG #FLG0101
-U 1 1 5E466669
-P 4150 2200
-F 0 "#FLG0101" H 4150 2275 50  0001 C CNN
-F 1 "PWR_FLAG" H 4200 2350 50  0000 C CNN
-F 2 "" H 4150 2200 50  0001 C CNN
-F 3 "~" H 4150 2200 50  0001 C CNN
-	1    4150 2200
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4150 2200 4050 2200
 Connection ~ 4150 2200
-Wire Wire Line
-	4250 2200 4150 2200
 Text Label 4250 2200 0    50   ~ 0
 VRAW
 $Comp
@@ -538,4 +476,65 @@ $EndComp
 Connection ~ 3150 3150
 Wire Wire Line
 	3150 3150 3550 3150
+Connection ~ 4050 4350
+$Comp
+L Device:Battery_Cell BT1
+U 1 1 5E27C1DA
+P 4050 4250
+F 0 "BT1" H 4168 4346 50  0000 L CNN
+F 1 "Battery_Cell" H 4168 4255 50  0000 L CNN
+F 2 "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical" V 4050 4310 50  0001 C CNN
+F 3 "~" V 4050 4310 50  0001 C CNN
+	1    4050 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_Schottky D5
+U 1 1 5E3095AE
+P 4050 2800
+F 0 "D5" V 4004 2879 50  0000 L CNN
+F 1 "D_Schottky" V 4095 2879 50  0000 L CNN
+F 2 "Diode_SMD:D_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 4050 2800 50  0001 C CNN
+F 3 "~" H 4050 2800 50  0001 C CNN
+	1    4050 2800
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D_Schottky D7
+U 1 1 5E30E3ED
+P 3900 2200
+F 0 "D7" H 3900 1984 50  0000 C CNN
+F 1 "D_Schottky" H 3900 2075 50  0000 C CNN
+F 2 "Diode_SMD:D_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 3900 2200 50  0001 C CNN
+F 3 "~" H 3900 2200 50  0001 C CNN
+	1    3900 2200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:D_Schottky D6
+U 1 1 5E30FCFE
+P 3550 2450
+F 0 "D6" V 3596 2371 50  0000 R CNN
+F 1 "D_Schottky" V 3505 2371 50  0000 R CNN
+F 2 "Diode_SMD:D_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 3550 2450 50  0001 C CNN
+F 3 "~" H 3550 2450 50  0001 C CNN
+	1    3550 2450
+	0    -1   -1   0   
+$EndComp
+Connection ~ 4050 2200
+Wire Wire Line
+	4250 2200 4150 2200
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5E466669
+P 4150 2200
+F 0 "#FLG0101" H 4150 2275 50  0001 C CNN
+F 1 "PWR_FLAG" H 4300 2350 50  0000 C CNN
+F 2 "" H 4150 2200 50  0001 C CNN
+F 3 "~" H 4150 2200 50  0001 C CNN
+	1    4150 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 2200 4050 2650
 $EndSCHEMATC
