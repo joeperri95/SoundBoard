@@ -421,7 +421,7 @@ F 1 "100nF" H 3850 800 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 3838 750 50  0001 C CNN
 F 3 "~" H 3800 900 50  0001 C CNN
 	1    3800 900 
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L Device:C C8
@@ -1007,4 +1007,21 @@ Wire Wire Line
 	3800 4450 3700 4450
 Wire Wire Line
 	3700 4450 3700 4400
+$Comp
+L Device:C C25
+U 1 1 5E44023E
+P 5250 900
+F 0 "C25" H 5365 946 50  0000 L CNN
+F 1 "100nF" H 5300 800 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5288 750 50  0001 C CNN
+F 3 "~" H 5250 900 50  0001 C CNN
+	1    5250 900 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 750  4800 750 
+Connection ~ 4800 750 
+Wire Wire Line
+	4800 1050 5250 1050
+Connection ~ 4800 1050
 $EndSCHEMATC
