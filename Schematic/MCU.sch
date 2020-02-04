@@ -195,7 +195,7 @@ Text HLabel 3900 4100 2    50   Input ~ 0
 FUEL_SDA
 Text HLabel 3900 4000 2    50   Input ~ 0
 FUEL_SCL
-Text HLabel 3500 6000 2    50   Input ~ 0
+Text HLabel 1600 4100 0    50   Input ~ 0
 V1_EN
 Text HLabel 3500 5900 2    50   Input ~ 0
 SHUTDOWN_AMP
@@ -804,40 +804,36 @@ Wire Wire Line
 $Comp
 L Switch:SW_Push SW1
 U 1 1 5E368629
-P 850 4350
-F 0 "SW1" V 896 4302 50  0000 R CNN
-F 1 "SW_Push" V 805 4302 50  0000 R CNN
-F 2 "Button_Switch_SMD:SW_Push_1P1T_NO_6x6mm_H9.5mm" H 850 4550 50  0001 C CNN
-F 3 "" H 850 4550 50  0001 C CNN
-	1    850  4350
+P 850 4450
+F 0 "SW1" V 896 4402 50  0000 R CNN
+F 1 "SW_Push" V 805 4402 50  0000 R CNN
+F 2 "Button_Switch_SMD:SW_Push_1P1T_NO_6x6mm_H9.5mm" H 850 4650 50  0001 C CNN
+F 3 "" H 850 4650 50  0001 C CNN
+	1    850  4450
 	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:R R1
 U 1 1 5E368E6F
-P 850 4000
-F 0 "R1" H 920 4046 50  0000 L CNN
-F 1 "10K" H 920 3955 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 780 4000 50  0001 C CNN
-F 3 "~" H 850 4000 50  0001 C CNN
-	1    850  4000
+P 850 4100
+F 0 "R1" H 920 4146 50  0000 L CNN
+F 1 "10K" H 920 4055 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 780 4100 50  0001 C CNN
+F 3 "~" H 850 4100 50  0001 C CNN
+	1    850  4100
 	1    0    0    -1  
 $EndComp
-Text HLabel 800  3750 0    50   Input ~ 0
-VDD
 Wire Wire Line
-	850  3850 850  3750
-Wire Wire Line
-	850  3750 800  3750
+	850  3950 850  3850
 $Comp
 L power:GND #PWR02
 U 1 1 5E36C004
-P 850 4550
-F 0 "#PWR02" H 850 4300 50  0001 C CNN
-F 1 "GND" H 855 4377 50  0000 C CNN
-F 2 "" H 850 4550 50  0001 C CNN
-F 3 "" H 850 4550 50  0001 C CNN
-	1    850  4550
+P 850 4650
+F 0 "#PWR02" H 850 4400 50  0001 C CNN
+F 1 "GND" H 855 4477 50  0000 C CNN
+F 2 "" H 850 4650 50  0001 C CNN
+F 3 "" H 850 4650 50  0001 C CNN
+	1    850  4650
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -862,12 +858,8 @@ F 3 "~" H 850 5150 50  0001 C CNN
 	1    850  5150
 	1    0    0    -1  
 $EndComp
-Text HLabel 800  4900 0    50   Input ~ 0
-VDD
 Wire Wire Line
 	850  5000 850  4900
-Wire Wire Line
-	850  4900 800  4900
 $Comp
 L power:GND #PWR03
 U 1 1 5E36C299
@@ -904,7 +896,6 @@ NoConn ~ 3500 5500
 NoConn ~ 3500 5600
 NoConn ~ 3500 5700
 NoConn ~ 3500 5800
-NoConn ~ 3500 6100
 NoConn ~ 3500 6200
 NoConn ~ 3500 6300
 NoConn ~ 3500 6400
@@ -920,8 +911,6 @@ NoConn ~ 1700 5700
 NoConn ~ 1700 5600
 NoConn ~ 1700 5500
 NoConn ~ 1700 5400
-NoConn ~ 1700 5300
-NoConn ~ 1700 5200
 NoConn ~ 1700 5100
 NoConn ~ 1700 4900
 NoConn ~ 1700 4800
@@ -931,7 +920,7 @@ NoConn ~ 1700 4500
 NoConn ~ 1700 4400
 NoConn ~ 1700 4300
 NoConn ~ 1700 4200
-NoConn ~ 1700 4100
+NoConn ~ 3500 6000
 NoConn ~ 1700 4000
 NoConn ~ 1700 3900
 NoConn ~ 1700 3800
@@ -1024,4 +1013,28 @@ Connection ~ 4800 750
 Wire Wire Line
 	4800 1050 5250 1050
 Connection ~ 4800 1050
+Wire Wire Line
+	1700 4100 1600 4100
+Text HLabel 750  4900 0    50   Input ~ 0
+V1
+Wire Wire Line
+	850  4900 750  4900
+Text HLabel 700  3850 0    50   Input ~ 0
+V1
+Wire Wire Line
+	700  3850 850  3850
+Wire Wire Line
+	850  5300 1700 5300
+Connection ~ 850  5300
+Wire Wire Line
+	1700 5200 1400 5200
+Wire Wire Line
+	1400 5200 1400 4250
+Wire Wire Line
+	1400 4250 850  4250
+Connection ~ 850  4250
+Text Label 3600 6100 0    50   ~ 0
+FTDI_PWR_EN
+Wire Wire Line
+	3600 6100 3500 6100
 $EndSCHEMATC
