@@ -402,11 +402,11 @@ X VCC 8 0 400 100 D 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #
-# Potentiometer_Digital_MCP4021-xxxxSN
+# Potentiometer_Digital_MCP4011-xxxxSN
 #
-DEF Potentiometer_Digital_MCP4021-xxxxSN U 0 20 Y Y 1 F N
+DEF Potentiometer_Digital_MCP4011-xxxxSN U 0 20 Y Y 1 F N
 F0 "U" -300 350 50 H V L CNN
-F1 "Potentiometer_Digital_MCP4021-xxxxSN" 50 350 50 H V L CNN
+F1 "Potentiometer_Digital_MCP4011-xxxxSN" 50 350 50 H V L CNN
 F2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" 50 -250 50 H I L CNN
 F3 "" 50 -550 50 H I L CNN
 ALIAS MCP4021-xxxxSN

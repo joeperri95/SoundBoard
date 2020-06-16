@@ -7,8 +7,13 @@ wav audio player
 - MP3 decoder chip
 - transistors to enable/disable peripherals
 - display
-- addon header
+- addon (SAO)  header
 - battery power
+
+- uart output header
+- expose some gpio pins to a header
+- smaller mounting holes
+- connect SWO pin for jlink debug messages
 
 ## Rev 1.0 changes
 
