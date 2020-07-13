@@ -1379,13 +1379,13 @@ Wire Wire Line
 	3200 5650 3400 5650
 NoConn ~ 950  6350
 $Comp
-L Potentiometer_Digital:MCP4011-xxxxSN U3
-U 1 1 5ED6F448
+L Potentiometer_Digital:MCP4021-xxxxSN U3
+U 1 1 5EEB82C1
 P 8150 4950
 F 0 "U3" V 8196 4606 50  0000 R CNN
-F 1 "MCP4011-xxxxSN" V 8105 4606 50  0000 R CNN
+F 1 "MCP4021-xxxxSN" V 8105 4606 50  0000 R CNN
 F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 8200 4700 50  0001 L CNN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/21978c.pdf, SOIC-8" H 8200 4400 50  0001 L CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/21945e.pdf" H 8200 4400 50  0001 L CNN
 	1    8150 4950
 	0    -1   -1   0   
 $EndComp

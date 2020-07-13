@@ -14,6 +14,10 @@ wav audio player
 - expose some gpio pins to a header
 - smaller mounting holes
 - connect SWO pin for jlink debug messages
+- headphone jack/driver
+
+- SPI pins on flash are backwards
+- ground and test points
 
 ## Rev 1.0 changes
 
