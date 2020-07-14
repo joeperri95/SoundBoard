@@ -19,6 +19,9 @@ wav audio player
 - SPI pins on flash are backwards
 - ground and test points
 
+## Rev 2.0 changes
+
+
 ## Rev 1.0 changes
 
 - Went exlusively with JLCPCB parts and paid for assembly service
