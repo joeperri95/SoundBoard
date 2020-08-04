@@ -1,0 +1,6 @@
+joe-GPIO.c:11:7:GPIO_init	16	static
+joe-GPIO.c:46:6:GPIO_writePin	24	static
+joe-GPIO.c:59:6:GPIO_togglePin	16	static
+joe-GPIO.c:64:6:GPIO_setDataDirection	32	static
+joe-GPIO.c:75:6:GPIO_setPUPDR	24	static
+joe-GPIO.c:81:9:GPIO_readPin	24	static

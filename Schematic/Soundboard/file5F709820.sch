@@ -1,0 +1,277 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 7 7
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Battery_Management:MCP73831-2-OT U?
+U 1 1 5F70C2B4
+P 3500 1850
+F 0 "U?" H 3700 1600 50  0000 C CNN
+F 1 "MCP73831-2-OT" H 3900 1500 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 3550 1600 50  0001 L CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001984g.pdf" H 3350 1800 50  0001 C CNN
+	1    3500 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 1450 3500 1550
+$Comp
+L Device:R R?
+U 1 1 5F70C2BD
+P 2950 2150
+AR Path="/5F0E4BAF/5F70C2BD" Ref="R?"  Part="1" 
+AR Path="/5F709821/5F70C2BD" Ref="R?"  Part="1" 
+F 0 "R?" H 3020 2196 50  0000 L CNN
+F 1 "2k" H 3020 2105 50  0000 L CNN
+F 2 "" V 2880 2150 50  0001 C CNN
+F 3 "~" H 2950 2150 50  0001 C CNN
+	1    2950 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 2000 2950 1950
+Wire Wire Line
+	2950 1950 3100 1950
+Wire Wire Line
+	2950 2300 3500 2300
+Wire Wire Line
+	3500 2300 3500 2150
+$Comp
+L power:GND #PWR?
+U 1 1 5F70C2C7
+P 3500 2300
+F 0 "#PWR?" H 3500 2050 50  0001 C CNN
+F 1 "GND" H 3505 2127 50  0000 C CNN
+F 2 "" H 3500 2300 50  0001 C CNN
+F 3 "" H 3500 2300 50  0001 C CNN
+	1    3500 2300
+	1    0    0    -1  
+$EndComp
+Connection ~ 3500 2300
+$Comp
+L Device:LED D?
+U 1 1 5F70C2CF
+P 4350 1950
+F 0 "D?" V 4389 1832 50  0000 R CNN
+F 1 "LED" V 4298 1832 50  0000 R CNN
+F 2 "" H 4350 1950 50  0001 C CNN
+F 3 "~" H 4350 1950 50  0001 C CNN
+	1    4350 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F70C2D5
+P 4050 1950
+AR Path="/5F0E4BAF/5F70C2D5" Ref="R?"  Part="1" 
+AR Path="/5F709821/5F70C2D5" Ref="R?"  Part="1" 
+F 0 "R?" V 3950 2100 50  0000 C CNN
+F 1 "220" V 3950 1950 50  0000 C CNN
+F 2 "" V 3980 1950 50  0001 C CNN
+F 3 "~" H 4050 1950 50  0001 C CNN
+	1    4050 1950
+	0    -1   -1   0   
+$EndComp
+Text Notes 3900 2450 0    50   ~ 0
+LIPO Charger\n
+Wire Wire Line
+	4750 1900 4750 1850
+Wire Wire Line
+	4750 1850 4900 1850
+$Comp
+L power:GND #PWR?
+U 1 1 5F70C2E3
+P 4750 1900
+F 0 "#PWR?" H 4750 1650 50  0001 C CNN
+F 1 "GND" H 4755 1727 50  0000 C CNN
+F 2 "" H 4750 1900 50  0001 C CNN
+F 3 "" H 4750 1900 50  0001 C CNN
+	1    4750 1900
+	1    0    0    -1  
+$EndComp
+Text Notes 4700 2250 0    50   ~ 0
+LIPO Battery\n
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 5F70C2EC
+P 5100 1750
+F 0 "J?" H 5180 1742 50  0000 L CNN
+F 1 "Conn_01x02" H 4850 1900 50  0000 L CNN
+F 2 "" H 5100 1750 50  0001 C CNN
+F 3 "~" H 5100 1750 50  0001 C CNN
+	1    5100 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:USB_B_Micro J?
+U 1 1 5F7135E7
+P 1850 1650
+F 0 "J?" H 1907 2117 50  0000 C CNN
+F 1 "USB_B_Micro" H 1907 2026 50  0000 C CNN
+F 2 "" H 2000 1600 50  0001 C CNN
+F 3 "~" H 2000 1600 50  0001 C CNN
+	1    1850 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1750 2050 1850 2050
+Wire Wire Line
+	1850 2150 1850 2050
+Connection ~ 1850 2050
+$Comp
+L power:GND #PWR?
+U 1 1 5F7170BE
+P 1850 2150
+F 0 "#PWR?" H 1850 1900 50  0001 C CNN
+F 1 "GND" H 1855 1977 50  0000 C CNN
+F 2 "" H 1850 2150 50  0001 C CNN
+F 3 "" H 1850 2150 50  0001 C CNN
+	1    1850 2150
+	1    0    0    -1  
+$EndComp
+NoConn ~ 2150 1850
+NoConn ~ 2150 1750
+NoConn ~ 2150 1650
+Wire Wire Line
+	4500 1950 4500 1450
+Wire Wire Line
+	4500 1450 3500 1450
+Wire Wire Line
+	4900 1750 4800 1750
+$Comp
+L Device:D_Schottky D?
+U 1 1 5F726D02
+P 5600 1250
+F 0 "D?" H 5600 1033 50  0000 C CNN
+F 1 "D_Schottky" H 5600 1124 50  0000 C CNN
+F 2 "" H 5600 1250 50  0001 C CNN
+F 3 "~" H 5600 1250 50  0001 C CNN
+	1    5600 1250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:D_Schottky D?
+U 1 1 5F7279B6
+P 5600 1450
+F 0 "D?" H 5500 1700 50  0000 C CNN
+F 1 "D_Schottky" H 5450 1600 50  0000 C CNN
+F 2 "" H 5600 1450 50  0001 C CNN
+F 3 "~" H 5600 1450 50  0001 C CNN
+	1    5600 1450
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4800 1750 4800 1450
+Wire Wire Line
+	4800 1450 5450 1450
+Connection ~ 4800 1750
+Wire Wire Line
+	4800 1750 3900 1750
+Wire Wire Line
+	4500 1450 4500 1250
+Wire Wire Line
+	4500 1250 5450 1250
+Connection ~ 4500 1450
+Wire Wire Line
+	5750 1450 6000 1450
+Wire Wire Line
+	6000 1450 6000 1250
+Wire Wire Line
+	6000 1250 5750 1250
+$Comp
+L Device:R R?
+U 1 1 5F735C39
+P 5450 1850
+F 0 "R?" H 5520 1896 50  0000 L CNN
+F 1 "R" H 5520 1805 50  0000 L CNN
+F 2 "" V 5380 1850 50  0001 C CNN
+F 3 "~" H 5450 1850 50  0001 C CNN
+	1    5450 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F73649D
+P 5450 2250
+F 0 "R?" H 5520 2296 50  0000 L CNN
+F 1 "R" H 5520 2205 50  0000 L CNN
+F 2 "" V 5380 2250 50  0001 C CNN
+F 3 "~" H 5450 2250 50  0001 C CNN
+	1    5450 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 1700 5450 1450
+Connection ~ 5450 1450
+Wire Wire Line
+	5450 2100 5450 2050
+$Comp
+L power:GND #PWR?
+U 1 1 5F73A93D
+P 5450 2400
+F 0 "#PWR?" H 5450 2150 50  0001 C CNN
+F 1 "GND" H 5455 2227 50  0000 C CNN
+F 2 "" H 5450 2400 50  0001 C CNN
+F 3 "" H 5450 2400 50  0001 C CNN
+	1    5450 2400
+	1    0    0    -1  
+$EndComp
+Text Label 5550 2050 0    50   ~ 0
+TO_ADC
+Wire Wire Line
+	5550 2050 5450 2050
+Connection ~ 5450 2050
+Wire Wire Line
+	5450 2050 5450 2000
+$Comp
+L Device:Fuse F?
+U 1 1 5F73F80C
+P 2300 1450
+F 0 "F?" V 2103 1450 50  0000 C CNN
+F 1 "Fuse" V 2194 1450 50  0000 C CNN
+F 2 "" V 2230 1450 50  0001 C CNN
+F 3 "~" H 2300 1450 50  0001 C CNN
+	1    2300 1450
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:Ferrite_Bead FB?
+U 1 1 5F73FF93
+P 2650 1450
+F 0 "FB?" V 2250 1450 50  0000 C CNN
+F 1 "Ferrite_Bead" V 2350 1450 50  0000 C CNN
+F 2 "" V 2580 1450 50  0001 C CNN
+F 3 "~" H 2650 1450 50  0001 C CNN
+	1    2650 1450
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D_Schottky D?
+U 1 1 5F7404E7
+P 3000 1450
+F 0 "D?" H 3000 1233 50  0000 C CNN
+F 1 "D_Schottky" H 3000 1324 50  0000 C CNN
+F 2 "" H 3000 1450 50  0001 C CNN
+F 3 "~" H 3000 1450 50  0001 C CNN
+	1    3000 1450
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2450 1450 2500 1450
+Connection ~ 3500 1450
+Wire Wire Line
+	2800 1450 2850 1450
+Wire Wire Line
+	3150 1450 3500 1450
+$EndSCHEMATC

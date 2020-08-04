@@ -21,6 +21,25 @@ wav audio player
 
 ## Rev 2.0 changes
 
+- Add IMU
+- Add microSD card
+- Use dedicated heaphone amp
+- Use I2S DAC 
+- Add SDRAM
+- Changed to stm32f429
+- Fix flash pins
+
+
+### TODO Rev 2.0
+- choose display
+- choose 5v boost
+- calculate 3.3V power needs; choose 3.3 LDO for peripherals
+- connect SDRAM
+- connect peripherals to main MCU block
+- add hierarchical connections
+- finish audio subsection
+- create BOM
+
 
 ## Rev 1.0 changes
 
