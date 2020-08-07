@@ -1,5 +1,6 @@
 EESchema Schematic File Version 4
-EELAYER 30 0
+LIBS:SoundBoard-cache
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -547,7 +548,7 @@ Wire Wire Line
 	2300 1400 2400 1400
 Connection ~ 2400 1400
 $Comp
-L Connector:Micro_SD_Card J2
+L SoundBoard-rescue:Micro_SD_Card-Connector J2
 U 1 1 5E2EDD03
 P 5800 6000
 F 0 "J2" H 5750 6717 50  0000 C CNN
@@ -601,9 +602,11 @@ NRESET
 Text Label 4100 3200 2    50   ~ 0
 NRESET
 $Comp
-L Connector:Conn_ARM_JTAG_SWD_10 J1
+L SoundBoard-rescue:Conn_ARM_JTAG_SWD_10-Connector J1
 U 1 1 5E2FC7AF
 P 4900 3000
+AR Path="/5E2FC7AF" Ref="J1"  Part="1" 
+AR Path="/5E238EA5/5E2FC7AF" Ref="J1"  Part="1" 
 F 0 "J1" H 4450 3500 50  0000 R CNN
 F 1 "Conn_ARM_JTAG_SWD_10" H 4850 3600 50  0000 R CNN
 F 2 "Connector_PinHeader_1.27mm:PinHeader_2x05_P1.27mm_Vertical_SMD" H 4950 2450 50  0001 L TNN
