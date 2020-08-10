@@ -2,22 +2,7 @@
 
 wav audio player
 
-## Future considerations
 
-- MP3 decoder chip
-- transistors to enable/disable peripherals
-- display
-- addon (SAO)  header
-- battery power
-
-- uart output header
-- expose some gpio pins to a header
-- smaller mounting holes
-- connect SWO pin for jlink debug messages
-- headphone jack/driver
-
-- SPI pins on flash are backwards
-- ground and test points
 
 ## Rev 2.0 changes
 
@@ -39,7 +24,13 @@ wav audio player
 - add hierarchical connections
 - finish audio subsection
 - create BOM
-
+- transistors to enable/disable peripherals
+- addon (SAO)  header
+- uart output header
+- expose some gpio pins to a header
+- smaller mounting holes
+- headphone jack/driver
+- ground and test points
 
 ## Rev 1.0 changes
 

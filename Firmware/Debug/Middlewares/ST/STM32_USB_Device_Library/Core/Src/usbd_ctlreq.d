@@ -28,10 +28,11 @@ Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.o: \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h \
+ ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h \
+ ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h \
- ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_dac.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_rcc.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_bus.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_system.h \
@@ -105,13 +106,15 @@ Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.o: \
 
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h:
 
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:
+
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h:
+
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h:
 
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h:
 
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h:
-
-../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_dac.h:
 
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_rcc.h:
 

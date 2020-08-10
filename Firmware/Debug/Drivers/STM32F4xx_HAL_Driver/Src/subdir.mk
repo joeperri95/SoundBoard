@@ -21,8 +21,6 @@ C_SRCS += \
 ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c \
 ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c \
 ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c \
-../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dac.c \
-../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma.c \
 ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.c \
 ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.c \
 ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.c \
@@ -47,8 +45,6 @@ OBJS += \
 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o \
 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o \
 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o \
-./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dac.o \
-./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma.o \
 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.o \
 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.o \
 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.o \
@@ -73,8 +69,6 @@ C_DEPS += \
 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.d \
 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.d \
 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.d \
-./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dac.d \
-./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma.d \
 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.d \
 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.d \
 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.d \
@@ -117,10 +111,6 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o: ../Drivers/STM32F4xx_HAL_D
 	arm-none-eabi-gcc "$<" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../USB_DEVICE/Target -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../USB_DEVICE/App -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.d" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c
 	arm-none-eabi-gcc "$<" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../USB_DEVICE/Target -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../USB_DEVICE/App -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.d" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
-Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dac.o: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dac.c
-	arm-none-eabi-gcc "$<" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../USB_DEVICE/Target -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../USB_DEVICE/App -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dac.d" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
-Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma.o: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma.c
-	arm-none-eabi-gcc "$<" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../USB_DEVICE/Target -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../USB_DEVICE/App -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma.d" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.o: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.c
 	arm-none-eabi-gcc "$<" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../USB_DEVICE/Target -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../USB_DEVICE/App -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.d" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.o: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.c

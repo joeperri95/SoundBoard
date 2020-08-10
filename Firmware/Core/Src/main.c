@@ -42,6 +42,7 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
+TIM_HandleTypeDef htim3;
 
 /* USER CODE BEGIN PV */
 
@@ -50,7 +51,7 @@
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
-static void MX_DAC_Init(void);
+static void MX_TIM3_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -67,7 +68,7 @@ static void MX_DAC_Init(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-
+  uint8_t data = 0;
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -87,19 +88,11 @@ int main(void)
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
-  GPIO_init(GPIO_PORT_A_BASE);
-  GPIO_init(GPIO_PORT_B_BASE);
-
-
-  GPIO_setDataDirection(GPIO_PORT_A_BASE, 9, GPIO_MODE_OUTPUT);
-
-  LL_AHB1_GRP1_EnableClock(LL_AHB1_GRP1_PERIPH_GPIOA);
-  LL_GPIO_ResetOutputPin(GPIOA, SPI_SCK_Pin|SPI_MOSI_Pin|LED_2_Pin|LED_1_Pin);
-
   MX_GPIO_Init();
-  MX_DAC_Init();
   MX_USB_DEVICE_Init();
+  MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
+
 
   /* USER CODE END 2 */
 
@@ -108,11 +101,14 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-    /* USER CODE BEGIN 3 */
-	  //HAL_GPIO_TogglePin(LED_1_GPIO_Port, LED_1_Pin);
 
-	  GPIO_togglePin(GPIO_PORT_A_BASE, GPIO_PIN_9);
-	  HAL_Delay(200);
+    /* USER CODE BEGIN 3 */
+
+
+	  for(int i = 0; i < 25 * 1000; i++)
+	  {}
+
+	  HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_4);
 
   }
   /* USER CODE END 3 */
@@ -166,45 +162,54 @@ void SystemClock_Config(void)
 }
 
 /**
-  * @brief DAC Initialization Function
+  * @brief TIM3 Initialization Function
   * @param None
   * @retval None
   */
-static void MX_DAC_Init(void)
+static void MX_TIM3_Init(void)
 {
 
-  /* USER CODE BEGIN DAC_Init 0 */
+  /* USER CODE BEGIN TIM3_Init 0 */
 
-  /* USER CODE END DAC_Init 0 */
+  /* USER CODE END TIM3_Init 0 */
 
-  LL_DAC_InitTypeDef DAC_InitStruct = {0};
+  TIM_ClockConfigTypeDef sClockSourceConfig = {0};
+  TIM_SlaveConfigTypeDef sSlaveConfig = {0};
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
 
-  LL_GPIO_InitTypeDef GPIO_InitStruct = {0};
+  /* USER CODE BEGIN TIM3_Init 1 */
 
-  /* Peripheral clock enable */
-  LL_APB1_GRP1_EnableClock(LL_APB1_GRP1_PERIPH_DAC1);
-  
-  LL_AHB1_GRP1_EnableClock(LL_AHB1_GRP1_PERIPH_GPIOA);
-  /**DAC GPIO Configuration  
-  PA4   ------> DAC_OUT1 
-  */
-  GPIO_InitStruct.Pin = LL_GPIO_PIN_4;
-  GPIO_InitStruct.Mode = LL_GPIO_MODE_ANALOG;
-  GPIO_InitStruct.Pull = LL_GPIO_PULL_NO;
-  LL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+  /* USER CODE END TIM3_Init 1 */
+  htim3.Instance = TIM3;
+  htim3.Init.Prescaler = 0;
+  htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim3.Init.Period = 0;
+  htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim3.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim3) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
+  if (HAL_TIM_ConfigClockSource(&htim3, &sClockSourceConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sSlaveConfig.SlaveMode = TIM_SLAVEMODE_DISABLE;
+  sSlaveConfig.InputTrigger = TIM_TS_ITR0;
+  if (HAL_TIM_SlaveConfigSynchro(&htim3, &sSlaveConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim3, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM3_Init 2 */
 
-  /* USER CODE BEGIN DAC_Init 1 */
-
-  /* USER CODE END DAC_Init 1 */
-  /** DAC channel OUT1 config 
-  */
-  DAC_InitStruct.TriggerSource = LL_DAC_TRIG_SOFTWARE;
-  DAC_InitStruct.WaveAutoGeneration = LL_DAC_WAVE_AUTO_GENERATION_NONE;
-  DAC_InitStruct.OutputBuffer = LL_DAC_OUTPUT_BUFFER_ENABLE;
-  LL_DAC_Init(DAC, LL_DAC_CHANNEL_1, &DAC_InitStruct);
-  /* USER CODE BEGIN DAC_Init 2 */
-
-  /* USER CODE END DAC_Init 2 */
+  /* USER CODE END TIM3_Init 2 */
 
 }
 
@@ -224,7 +229,8 @@ static void MX_GPIO_Init(void)
   LL_AHB1_GRP1_EnableClock(LL_AHB1_GRP1_PERIPH_GPIOB);
 
   /**/
-  LL_GPIO_ResetOutputPin(GPIOA, SPI_SCK_Pin|SPI_MOSI_Pin|LED_2_Pin|LED_1_Pin);
+  LL_GPIO_ResetOutputPin(GPIOA, LL_GPIO_PIN_4|SPI_SCK_Pin|SPI_MOSI_Pin|LED_2_Pin 
+                          |LED_1_Pin);
 
   /**/
   LL_GPIO_ResetOutputPin(SPI_FLASH_CS_N_GPIO_Port, SPI_FLASH_CS_N_Pin);
@@ -233,7 +239,8 @@ static void MX_GPIO_Init(void)
   LL_GPIO_ResetOutputPin(GPIOB, POT_CS_N_Pin|POT_UD_Pin);
 
   /**/
-  GPIO_InitStruct.Pin = SPI_SCK_Pin|SPI_MOSI_Pin|LED_2_Pin|LED_1_Pin;
+  GPIO_InitStruct.Pin = LL_GPIO_PIN_4|SPI_SCK_Pin|SPI_MOSI_Pin|LED_2_Pin 
+                          |LED_1_Pin;
   GPIO_InitStruct.Mode = LL_GPIO_MODE_OUTPUT;
   GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_LOW;
   GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
