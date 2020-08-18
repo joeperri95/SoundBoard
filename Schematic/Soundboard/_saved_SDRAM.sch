@@ -216,9 +216,9 @@ Text Label 5100 4550 2    50   ~ 0
 SDNCAS
 Text Label 5100 4150 2    50   ~ 0
 SDNCLK
-Text Label 4300 4350 0    50   ~ 0
+Text Label 4000 5300 0    50   ~ 0
 NBL0
-Text Label 4300 4450 0    50   ~ 0
+Text Label 4000 5400 0    50   ~ 0
 NBL1
 Text Label 5100 4650 2    50   ~ 0
 SDNRAS
@@ -244,8 +244,8 @@ F 3 "" H 2000 1550 50  0001 C CNN
 	4    2000 1550
 	1    0    0    -1  
 $EndComp
-NoConn ~ 4300 4450
-NoConn ~ 4300 4350
+NoConn ~ 4000 5400
+NoConn ~ 4000 5300
 NoConn ~ 5100 4350
 NoConn ~ 5100 4250
 $EndSCHEMATC

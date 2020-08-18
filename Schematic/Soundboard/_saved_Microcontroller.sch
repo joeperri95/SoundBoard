@@ -551,12 +551,12 @@ Text Label 8200 5500 0    50   ~ 0
 I2C_SCL
 Text Label 8200 5400 0    50   ~ 0
 I2C_SDA
-Text Label 5450 3200 2    50   ~ 0
+Text Label 6000 2900 2    50   ~ 0
 BOOT_0
-Text Label 5450 3300 2    50   ~ 0
+Text Label 6000 3000 2    50   ~ 0
 BOOT_1
-NoConn ~ 5450 3300
-NoConn ~ 5450 3200
+NoConn ~ 6000 3000
+NoConn ~ 6000 2900
 Text HLabel 7650 2850 2    50   Input ~ 0
 V_BAT
 $Comp

@@ -17,19 +17,12 @@ wav audio player
 
 ### TODO Rev 2.0
 - choose display
-- choose 5v boost
+- boost component calculation
 - calculate 3.3V power needs; choose 3.3 LDO for peripherals
-- connect SDRAM
-- connect peripherals to main MCU block
-- add hierarchical connections
-- finish audio subsection
 - create BOM
-- transistors to enable/disable peripherals
-- addon (SAO)  header
-- uart output header
+- footprint asasociation
 - expose some gpio pins to a header
 - smaller mounting holes
-- headphone jack/driver
 - ground and test points
 
 ## Rev 1.0 changes
