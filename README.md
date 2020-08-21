@@ -17,13 +17,9 @@ wav audio player
 
 ### TODO Rev 2.0
 - choose display
-- boost component calculation
-- calculate 3.3V power needs; choose 3.3 LDO for peripherals
+- determine how to do buttons
 - create BOM
-- footprint asasociation
-- expose some gpio pins to a header
-- smaller mounting holes
-- ground and test points
+- footprint association
 
 ## Rev 1.0 changes
 

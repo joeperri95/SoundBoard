@@ -71,17 +71,6 @@ B0
 Text Label 5200 5150 0    50   ~ 0
 B4
 $Comp
-L Connector_Generic_MountingPin:Conn_01x40_MountingPin J3
-U 1 1 5F647763
-P 7450 3750
-F 0 "J3" H 7538 3664 50  0000 L CNN
-F 1 "Conn_01x40_MountingPin" H 7538 3573 50  0000 L CNN
-F 2 "Connector_FFC-FPC:TE_4-1734839-0_1x40-1MP_P0.5mm_Horizontal" H 7450 3750 50  0001 C CNN
-F 3 "~" H 7450 3750 50  0001 C CNN
-	1    7450 3750
-	1    0    0    -1  
-$EndComp
-$Comp
 L Soundboard:STM32f429IIT6-units U1
 U 3 1 5F39E369
 P 4600 2350
@@ -159,16 +148,23 @@ F 3 "" H 7450 5950 50  0001 C CNN
 	1    7450 5950
 	1    0    0    -1  
 $EndComp
-NoConn ~ 7250 2950
-NoConn ~ 7250 2850
-NoConn ~ 7250 2750
-NoConn ~ 7250 2650
-NoConn ~ 7250 2550
-NoConn ~ 7250 2450
-NoConn ~ 7250 2350
-NoConn ~ 7250 2250
-NoConn ~ 7250 2150
-NoConn ~ 7250 2050
-NoConn ~ 7250 1950
-NoConn ~ 7250 1850
+$Comp
+L Connector_Generic_MountingPin:Conn_01x40_MountingPin J3
+U 1 1 5F647763
+P 7450 3750
+F 0 "J3" H 7538 3664 50  0000 L CNN
+F 1 "Conn_01x40_MountingPin" H 7538 3573 50  0000 L CNN
+F 2 "Connector_FFC-FPC:TE_4-1734839-0_1x40-1MP_P0.5mm_Horizontal" H 7450 3750 50  0001 C CNN
+F 3 "~" H 7450 3750 50  0001 C CNN
+	1    7450 3750
+	1    0    0    -1  
+$EndComp
+Text Label 6850 2050 2    50   ~ 0
+VDD
+Text Label 6850 2150 2    50   ~ 0
+GND
+Text Label 6850 1850 2    50   ~ 0
+BACKLIGHT_V
+Text Label 6850 1950 2    50   ~ 0
+GND
 $EndSCHEMATC
