@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 7 7
+Sheet 6 7
 Title ""
 Date ""
 Rev ""
@@ -386,7 +386,7 @@ AR Path="/5F0E03BF/5F4F2E71" Ref="R?"  Part="1"
 AR Path="/5F4E88D1/5F4F2E71" Ref="R7"  Part="1" 
 F 0 "R7" H 3220 2346 50  0000 L CNN
 F 1 "10k" H 3220 2255 50  0000 L CNN
-F 2 "" V 3080 2300 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 3080 2300 50  0001 C CNN
 F 3 "~" H 3150 2300 50  0001 C CNN
 	1    3150 2300
 	1    0    0    -1  
@@ -399,7 +399,7 @@ AR Path="/5F0E03BF/5F4F2E78" Ref="R?"  Part="1"
 AR Path="/5F4E88D1/5F4F2E78" Ref="R8"  Part="1" 
 F 0 "R8" H 3520 2346 50  0000 L CNN
 F 1 "10k" H 3520 2255 50  0000 L CNN
-F 2 "" V 3380 2300 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 3380 2300 50  0001 C CNN
 F 3 "~" H 3450 2300 50  0001 C CNN
 	1    3450 2300
 	1    0    0    -1  
@@ -482,7 +482,7 @@ AR Path="/5F0E03BF/5F4F2EA4" Ref="R?"  Part="1"
 AR Path="/5F4E88D1/5F4F2EA4" Ref="R9"  Part="1" 
 F 0 "R9" H 3970 2346 50  0000 L CNN
 F 1 "10k" H 3970 2255 50  0000 L CNN
-F 2 "" V 3830 2300 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 3830 2300 50  0001 C CNN
 F 3 "~" H 3900 2300 50  0001 C CNN
 	1    3900 2300
 	1    0    0    -1  
@@ -495,7 +495,7 @@ AR Path="/5F0E03BF/5F4F2EAB" Ref="R?"  Part="1"
 AR Path="/5F4E88D1/5F4F2EAB" Ref="R10"  Part="1" 
 F 0 "R10" H 4420 2346 50  0000 L CNN
 F 1 "10k" H 4420 2255 50  0000 L CNN
-F 2 "" V 4280 2300 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 4280 2300 50  0001 C CNN
 F 3 "~" H 4350 2300 50  0001 C CNN
 	1    4350 2300
 	1    0    0    -1  

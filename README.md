@@ -16,10 +16,9 @@ wav audio player
 
 
 ### TODO Rev 2.0
-- choose display
 - determine how to do buttons
 - create BOM
-- footprint association
+- layout
 
 ## Rev 1.0 changes
 
